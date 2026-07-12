@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "",
 
 	// 站点 URL
-	site_url: "https://feifeicodes.site",
+	site_url: "feifeicodes.site",
 
 	// 站点描述
 	description:
