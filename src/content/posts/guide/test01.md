@@ -2,7 +2,8 @@
 title: 一元机场推荐 & 我的第一篇博客
 published: 2026-07-12
 description: 记录我的第一篇博客，顺便分享一个高性价比的机场方案，适合开发者日常使用。
-image: ./cover.jpg
+# ✅ 修改点1：先 ../ 返回上一级，再进入 images
+image: ../images/cover.jpg 
 tags: [生活, 工具, 网络]
 category: 随笔
 draft: false
@@ -39,7 +40,8 @@ draft: false
 **👇 官方界面截图参考：**
 
 <div style="text-align: center; margin-top: 10px;">
-  <img src="./price-screenshot.png" alt="一元机场后台截图" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  <!-- ✅ 修改点2：正文里的图片也要加 ../ -->
+  <img src="../images/price-screenshot.png" alt="一元机场后台截图" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </div>
 
 ---
