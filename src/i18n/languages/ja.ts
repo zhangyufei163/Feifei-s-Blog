@@ -316,7 +316,8 @@ export const ja: Translation = {
 	[Key.siteStatsRunningDays]: "運用日数",
 	[Key.siteStatsLastUpdate]: "最終活動",
 	[Key.siteStatsDaysAgo]: "{days} 日前",
-	[Key.siteStatsDays]: "{days} 日",
+	[Key.siteStatsDays]: "{days} 天",
+	[Key.siteStatsCommits]: "提交次数",
 	[Key.today]: "今日",
 
 	// サイト情報

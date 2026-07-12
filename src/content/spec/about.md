@@ -19,7 +19,7 @@
 
 **⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
 
-::github{repo="CuteLeaf/Firefly"}
+::github{repo="zhangyufei163/Feifei-s-Blog"}
 
 ::github{repo="saicaca/fuwari"}
 
