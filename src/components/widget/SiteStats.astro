@@ -1,5 +1,4 @@
 ---
-import { execSync } from "node:child_process";
 import { Icon } from "astro-icon/components";
 import WidgetLayout from "@/components/common/WidgetLayout.astro";
 import { siteConfig } from "@/config";
@@ -25,17 +24,6 @@ const showTitle = widgetConfig?.showTitle !== false;
 // 从配置中获取站点开始日期
 const siteStartDate = siteConfig.siteStartDate || "2025-01-01";
 
-// 获取 GitHub 提交次数
-let commitCount = 0;
-if (siteConfig.githubRepo) {
-	try {
-		const count = execSync("git rev-list --count HEAD", { encoding: "utf-8" }).trim();
-		commitCount = Number.parseInt(count, 10) || 0;
-	} catch {
-		commitCount = 0;
-	}
-}
-
 // 获取所有文章
 const posts = await getSortedPosts();
 const categories = await getCategoryList();
@@ -53,7 +41,7 @@ for (const post of posts) {
 			.trim();
 
 		// 分别计算中文字符和英文字符
-		const chineseChars = text.match(/[一-龥]/g) || [];
+		const chineseChars = text.match(/[\u4e00-\u9fa5]/g) || [];
 		const englishChars = text.match(/[a-zA-Z]/g) || [];
 
 		totalWords += chineseChars.length + englishChars.length;
@@ -99,12 +87,6 @@ const stats = [
 		value: tags.length,
 	},
 	{
-		icon: "material-symbols:commit",
-		label: i18n(I18nKey.siteStatsCommits),
-		value: commitCount,
-		formatted: true,
-	},
-	{
 		icon: "material-symbols:text-ad-outline-rounded",
 		label: i18n(I18nKey.siteStatsTotalWords),
 		value: totalWords,
@@ -142,7 +124,7 @@ const stats = [
           </span>
         </div>
         <div class="flex items-center">
-          <span
+          <span 
             class="text-base font-bold text-neutral-900 dark:text-neutral-100"
             data-stat-id={stat.id}
           >

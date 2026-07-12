@@ -51,9 +51,6 @@ export type SiteConfig = {
 		followTheme?: boolean;
 	};
 
-	// GitHub 仓库，格式 "owner/repo"，用于展示提交次数等统计
-	githubRepo?: string;
-
 	// 站点开始日期，用于计算运行天数
 	siteStartDate?: string; // 格式: "YYYY-MM-DD"
 
