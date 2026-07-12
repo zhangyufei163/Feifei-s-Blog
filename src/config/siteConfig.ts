@@ -9,10 +9,10 @@ export const siteConfig: SiteConfig = {
 	title: "Feifei's Blog",
 
 	// 站点副标题
-	subtitle: "",
+	subtitle: " ",
 
 	// 站点 URL
-	site_url: "feifeicodes.site",
+	site_url: "https://feifeicodes.site",
 
 	// 站点描述
 	description:
