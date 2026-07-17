@@ -2,7 +2,7 @@
 title: 初识stl
 published: 2026-07-17
 description: 最近花费了两周的时间学习了stl喵，在此发表个博客巩固一下学习，后面还会有关于vector,list等的内容喵
-image: ../images/02.jpg 
+image: ../images/02.png 
 tags: [生活, 学习, 网络]
 category: 学习
 draft: false
